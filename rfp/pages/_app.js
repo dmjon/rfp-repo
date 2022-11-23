@@ -1,7 +1,10 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
+import '@aws-amplify/ui-react/styles.css';
+import '../configureAmplify';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps, }) {
   return <Component {...pageProps} />
 }
 
-export default MyApp
+export default withAuthenticator(MyApp)

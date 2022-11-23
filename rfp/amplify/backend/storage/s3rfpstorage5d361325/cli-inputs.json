@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3rfpstorage5d361325",
+  "bucketName": "rfp-storage-5d361325",
+  "policyUUID": "7d22f078",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}
