@@ -3,10 +3,11 @@
 input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
 
 type Request @model @aws_api_key{
-  id: ID!
+  id: ID! @index(sortKeyFields: ["createdAt"])
   description: String!
   cost: Float!
   vendor: String!
+  method: String
   account: Account
   files: [File] @hasMany
 }

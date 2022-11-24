@@ -1,7 +1,7 @@
-import '../styles/globals.css';
-import '@aws-amplify/ui-react/styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../configureAmplify';
 import { withAuthenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 
 function MyApp({ Component, pageProps, }) {
   return <Component {...pageProps} />

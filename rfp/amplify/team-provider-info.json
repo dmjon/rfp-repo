@@ -28,6 +28,9 @@
           "deploymentBucketName": "amplify-rfp-dev-221056-deployment",
           "s3Key": "amplify-builds/rfp60d86945CreateAuthChallenge-5970564353375657315a-build.zip"
         }
+      },
+      "storage": {
+        "s3rfpstorage5d361325": {}
       }
     }
   }

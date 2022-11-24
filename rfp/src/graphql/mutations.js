@@ -11,6 +11,7 @@ export const createRequest = /* GraphQL */ `
       description
       cost
       vendor
+      method
       account {
         id
         label
@@ -51,6 +52,7 @@ export const updateRequest = /* GraphQL */ `
       description
       cost
       vendor
+      method
       account {
         id
         label
@@ -91,6 +93,7 @@ export const deleteRequest = /* GraphQL */ `
       description
       cost
       vendor
+      method
       account {
         id
         label
@@ -186,6 +189,7 @@ export const createAccount = /* GraphQL */ `
           description
           cost
           vendor
+          method
           createdAt
           updatedAt
           accountRequestsId
@@ -214,6 +218,7 @@ export const updateAccount = /* GraphQL */ `
           description
           cost
           vendor
+          method
           createdAt
           updatedAt
           accountRequestsId
@@ -242,6 +247,7 @@ export const deleteAccount = /* GraphQL */ `
           description
           cost
           vendor
+          method
           createdAt
           updatedAt
           accountRequestsId

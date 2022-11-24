@@ -8,6 +8,7 @@ export const getRequest = /* GraphQL */ `
       description
       cost
       vendor
+      method
       account {
         id
         label
@@ -50,6 +51,7 @@ export const listRequests = /* GraphQL */ `
         description
         cost
         vendor
+        method
         account {
           id
           label
@@ -117,6 +119,7 @@ export const getAccount = /* GraphQL */ `
           description
           cost
           vendor
+          method
           createdAt
           updatedAt
           accountRequestsId
