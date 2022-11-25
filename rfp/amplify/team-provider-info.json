@@ -12,9 +12,6 @@
       "AmplifyAppId": "dk9z3m5qwiwu5"
     },
     "categories": {
-      "api": {
-        "rfp": {}
-      },
       "auth": {
         "rfp60d86945": {},
         "rfp31f3a354": {}

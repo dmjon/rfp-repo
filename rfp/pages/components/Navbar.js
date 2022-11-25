@@ -49,7 +49,7 @@ export default function Navbar(){
               <a class="nav-link" href="crud-requests">CRUD - Requests</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="crud-files">CRUD - Files</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>

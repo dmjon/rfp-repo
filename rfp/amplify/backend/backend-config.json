@@ -1,39 +1,5 @@
 {
-  "api": {
-    "rfp": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "rfp31f3a354",
-          "attributes": [
-            "UserPoolId"
-          ]
-        }
-      ],
-      "output": {
-        "authConfig": {
-          "defaultAuthentication": {
-            "authenticationType": "API_KEY",
-            "apiKeyConfig": {
-              "apiKeyExpirationDays": 365,
-              "apiKeyExpirationDate": "2023-11-20T15:58:05.138Z",
-              "description": ""
-            }
-          },
-          "additionalAuthenticationProviders": [
-            {
-              "authenticationType": "AMAZON_COGNITO_USER_POOLS",
-              "userPoolConfig": {
-                "userPoolId": "authrfp31f3a354"
-              }
-            }
-          ]
-        }
-      }
-    }
-  },
+  "api": {},
   "function": {
     "rfp60d86945DefineAuthChallenge": {
       "build": true,

@@ -9,6 +9,8 @@ export const getRequest = /* GraphQL */ `
       cost
       vendor
       method
+      createdAt
+      createdBy
       account {
         id
         label
@@ -27,13 +29,13 @@ export const getRequest = /* GraphQL */ `
           name
           location
           type
+          uploadedBy
           createdAt
           updatedAt
           requestFilesId
         }
         nextToken
       }
-      createdAt
       updatedAt
       accountRequestsId
     }
@@ -52,6 +54,8 @@ export const listRequests = /* GraphQL */ `
         cost
         vendor
         method
+        createdAt
+        createdBy
         account {
           id
           label
@@ -64,7 +68,6 @@ export const listRequests = /* GraphQL */ `
         files {
           nextToken
         }
-        createdAt
         updatedAt
         accountRequestsId
       }
@@ -79,6 +82,7 @@ export const getFile = /* GraphQL */ `
       name
       location
       type
+      uploadedBy
       createdAt
       updatedAt
       requestFilesId
@@ -97,6 +101,7 @@ export const listFiles = /* GraphQL */ `
         name
         location
         type
+        uploadedBy
         createdAt
         updatedAt
         requestFilesId
@@ -121,6 +126,7 @@ export const getAccount = /* GraphQL */ `
           vendor
           method
           createdAt
+          createdBy
           updatedAt
           accountRequestsId
         }
@@ -149,6 +155,50 @@ export const listAccounts = /* GraphQL */ `
         }
         createdAt
         updatedAt
+      }
+      nextToken
+    }
+  }
+`;
+export const requestsByIdAndCreatedAt = /* GraphQL */ `
+  query RequestsByIdAndCreatedAt(
+    $id: ID!
+    $createdAt: ModelStringKeyConditionInput
+    $sortDirection: ModelSortDirection
+    $filter: ModelRequestFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    requestsByIdAndCreatedAt(
+      id: $id
+      createdAt: $createdAt
+      sortDirection: $sortDirection
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+    ) {
+      items {
+        id
+        description
+        cost
+        vendor
+        method
+        createdAt
+        createdBy
+        account {
+          id
+          label
+          hasFYBudget
+          budgetAmount
+          balance
+          createdAt
+          updatedAt
+        }
+        files {
+          nextToken
+        }
+        updatedAt
+        accountRequestsId
       }
       nextToken
     }

@@ -1,11 +1,4 @@
 export type AmplifyDependentResourcesAttributes = {
-    "api": {
-        "rfp": {
-            "GraphQLAPIKeyOutput": "string",
-            "GraphQLAPIIdOutput": "string",
-            "GraphQLAPIEndpointOutput": "string"
-        }
-    },
     "function": {
         "rfp60d86945DefineAuthChallenge": {
             "Name": "string",

@@ -12,6 +12,8 @@ export const createRequest = /* GraphQL */ `
       cost
       vendor
       method
+      createdAt
+      createdBy
       account {
         id
         label
@@ -30,13 +32,13 @@ export const createRequest = /* GraphQL */ `
           name
           location
           type
+          uploadedBy
           createdAt
           updatedAt
           requestFilesId
         }
         nextToken
       }
-      createdAt
       updatedAt
       accountRequestsId
     }
@@ -53,6 +55,8 @@ export const updateRequest = /* GraphQL */ `
       cost
       vendor
       method
+      createdAt
+      createdBy
       account {
         id
         label
@@ -71,13 +75,13 @@ export const updateRequest = /* GraphQL */ `
           name
           location
           type
+          uploadedBy
           createdAt
           updatedAt
           requestFilesId
         }
         nextToken
       }
-      createdAt
       updatedAt
       accountRequestsId
     }
@@ -94,6 +98,8 @@ export const deleteRequest = /* GraphQL */ `
       cost
       vendor
       method
+      createdAt
+      createdBy
       account {
         id
         label
@@ -112,13 +118,13 @@ export const deleteRequest = /* GraphQL */ `
           name
           location
           type
+          uploadedBy
           createdAt
           updatedAt
           requestFilesId
         }
         nextToken
       }
-      createdAt
       updatedAt
       accountRequestsId
     }
@@ -134,6 +140,7 @@ export const createFile = /* GraphQL */ `
       name
       location
       type
+      uploadedBy
       createdAt
       updatedAt
       requestFilesId
@@ -150,6 +157,7 @@ export const updateFile = /* GraphQL */ `
       name
       location
       type
+      uploadedBy
       createdAt
       updatedAt
       requestFilesId
@@ -166,6 +174,7 @@ export const deleteFile = /* GraphQL */ `
       name
       location
       type
+      uploadedBy
       createdAt
       updatedAt
       requestFilesId
@@ -191,6 +200,7 @@ export const createAccount = /* GraphQL */ `
           vendor
           method
           createdAt
+          createdBy
           updatedAt
           accountRequestsId
         }
@@ -220,6 +230,7 @@ export const updateAccount = /* GraphQL */ `
           vendor
           method
           createdAt
+          createdBy
           updatedAt
           accountRequestsId
         }
@@ -249,6 +260,7 @@ export const deleteAccount = /* GraphQL */ `
           vendor
           method
           createdAt
+          createdBy
           updatedAt
           accountRequestsId
         }

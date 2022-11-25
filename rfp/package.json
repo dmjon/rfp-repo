@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@aws-amplify/cli": "^10.5.1",
     "@aws-amplify/ui-react": "^4.0.1",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
