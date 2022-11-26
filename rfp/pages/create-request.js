@@ -28,7 +28,8 @@ export default function Home() {
         query: createRequest,
         variables: {input: request}
     });
-    Router.push(`/request/${id}`);
+    //Router.push(`/request/${id}`);
+    location.reload();
    }
 
   useEffect(() => {

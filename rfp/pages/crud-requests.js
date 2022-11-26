@@ -13,22 +13,16 @@ const initialFileState = { name: "", location: "", type: "" };
 const [request, setRequest] = useState(initialState);
 const [file, setFile] = useState(initialFileState);
 const { description, cost, vendor, method } = request;
-const{ name, location, type } = file;
-const fileInput = useRef(null);
+
 function onChange(e) {
  setRequest(() => ({
      ... request,
      [e.target.name] : e.target.value,
  }));
 }
-function onChangeFile(e) {
-    const fileUploaded = e.target.files[0];
-    if (!fileUploaded) return;
-    setFile(fileUploaded);
-   }
 
 async function createNewRequest() {
-    if (!description || !cost || !vendor) return;
+    if (!description || !cost || !vendor || !method) return;
     const id = uuid();
     request.id = id;
 
@@ -40,24 +34,6 @@ async function createNewRequest() {
     location.reload();
    }
 
-async function createNewFile(){
-    fileInput.current.click();
-    const id2 = uuid();
-    file.id = id2;
-
-    if (file) {
-        const filename = `${file.name}_${uuid()}`;
-        file.name = filename;
-        await Storage.put(filename, file);
-      }
-
-    await API.graphql({
-        query: createFile,
-        variables: {input: file}
-    });
-
-    await Storage.put(file.name, file.name)
-}
 
 //READ REQUESTS API CODE ---------------------------------------------
     const [requests, setRequests] = useState([]);
