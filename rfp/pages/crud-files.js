@@ -4,6 +4,8 @@ import { useState, useEffect, useRef } from "react";
 import { API, Storage } from "aws-amplify";
 import { createFile } from "../src/graphql/mutations";
 import { v4 as uuid } from "uuid";
+import { Authenticator } from '@aws-amplify/ui-react';
+import '../configureAmplify'
 
 export default function crudFiles(){
 
@@ -55,6 +57,10 @@ async function createNewFile(){
         setFiles(fileData.data.listFiles.items)
       }
     return(
+        <Authenticator
+        variation="modal"
+        hideSignUp={true}
+        >
         <>
         <Navbar />
         <div className="container mt-5">
@@ -113,5 +119,6 @@ async function createNewFile(){
             </div>
         </div>
         </>
+        </Authenticator>
     )
 }
